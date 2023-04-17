@@ -1,0 +1,51 @@
+
+.page-header {
+
+    text-align: center;
+
+}
+
+#mensajeinput {
+    height: 150px;
+
+}
+
+#tituloContacto {
+    text-align: center;
+}
+
+#formulariotexto {
+    text-align: left;
+}
+
+.formularioContacto {
+    float: left;
+
+}
+
+.texto {
+    float: right;
+}
+
+#infoContacto {
+    text-align: left;
+}
+
+button {
+    background-color: gray;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+p {
+    line-height: 0.5;
+}
+
+
+#mascotas1 {
+    width: auto;
+    height: auto;
+}

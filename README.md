@@ -1,2 +1,1 @@
-# TiendaWebAnimal
-Pagina Tienda Web Animal
+# TiendaAnimal
