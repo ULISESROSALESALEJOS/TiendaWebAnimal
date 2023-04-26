@@ -6,26 +6,17 @@
 }
 
 #mensajeinput {
-    height: 150px;
+    height: 230px;
 
 }
 
 #tituloContacto {
     text-align: center;
+    padding-bottom: 25px;
 }
 
-#formulariotexto {
-    text-align: left;
-}
 
-.formularioContacto {
-    float: left;
-
-}
-
-.texto {
-    float: right;
-}
+  
 
 #infoContacto {
     text-align: left;
@@ -40,12 +31,22 @@ button {
     cursor: pointer;
 }
 
-p {
-    line-height: 0.5;
-}
 
 
 #mascotas1 {
     width: auto;
     height: auto;
 }
+
+
+.footer {
+    background-image: radial-gradient(#88a4c4 50%, #bad8da);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.container.form-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
