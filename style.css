@@ -193,3 +193,51 @@
     max-height: calc(90vh - 250px); /* establece una altura máxima */
     overflow-y: auto;
 }
+
+
+
+.card {
+    display: inline-block;
+    width: 18%;
+    margin-right: 1%;
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .card:last-child {
+    margin-right: 0;
+  }
+  
+  .card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+
+  .card-img-top {
+    width: 10%;
+  }
+
+  #tituloNosotros {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#Perritos-necesitados {
+    width: 90%;
+    height: 90%;
+
+}
+
+#tituloEquipo {
+    text-align: center;
+
+}
