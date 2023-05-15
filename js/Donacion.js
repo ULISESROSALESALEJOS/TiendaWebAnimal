@@ -76,7 +76,7 @@ function cerrarModal() {
 };
 
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     cerrar();
   }
 }
