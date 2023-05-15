@@ -6,13 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registrarse</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styleRgistrarse.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styleRgistrarse.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/refreshHtml.js"></script>
+
 </head>
 <style>
     body {
@@ -22,6 +24,7 @@
     }
 </style>
 <body>
+
 <header>
     <div id="primera-barra" class="container-fluid ">
         <div class="row">
@@ -39,10 +42,10 @@
             <div class="col-sm-4">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="inicioSesion.html">Login</a>
+                        <a class="nav-link " href="inicioSesion.html">Iniciar Sesion</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="registrarse.html">Registrarme</a>
+                        <a class="nav-link " href="regiones2.html">Registrarme</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#">Ayuda</a>
@@ -63,7 +66,7 @@
             <div class="collapse navbar-collapse justify-content-start" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link " href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Comida</a>
@@ -73,16 +76,25 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Tienda.html">Tienda</a>
+                        <a class="nav-link " href="index.html">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                        <a class="nav-link " href="index.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Donaciones.html">Donaciones</a>
+                        <a class="nav-link " href="index.html">Donaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Nosotros.html">Nosotros</a>
+                        <a class="nav-link " href="index.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="img/usuario.jpg" alt="usuario" style="height: 20px; width: 20px;  "
+                                 class="rounded-pill">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Francisco Eljuri</a>
                     </li>
                 </ul>
             </div>
@@ -94,42 +106,58 @@
     </div>
 </header>
 
-<div id="formulario1" class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">Registrarse</h4>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group ">
-                                <label for="inputNombre">Nombre</label>
-                                <input type="text" class="form-control" id="inputNombre" required>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Registrarse</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="register-form">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
                             </div>
-                            <div class="form-group ">
-                                <label for="inputApellido">Apellido</label>
-                                <input type="text" class="form-control" id="inputApellido" required>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" required>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group ">
-                                <label for="inputTelefono">Teléfono</label>
-                                <input type="tel" class="form-control" id="inputTelefono" required>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
-                            <div class="form-group ">
-                                <label for="inputEmail">Correo electrónico</label>
-                                <input type="email" class="form-control" id="inputEmail" required>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="region" class="form-label">Región:</label>
+                                    <select id="region" name="region" class="form-control"></select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comuna" class="form-label">Comuna:</label>
+                                    <select id="comuna" name="comuna" class="form-control"></select>
+                                </div>
+                            <script src="regiones.js"></script>
+                            </form>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
                             </div>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
-                    </form>
+                            <div class="mb-3">
+                                <label for="confirm-password" class="form-label">Confirmar Contraseña:</label>
+                                <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="aceptar-terminos" required>
+                                <label class="form-check-label" for="aceptar-terminos">Acepto los términos y condiciones</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 
 <footer class=" footer">
     <!-- Grid container -->
@@ -229,5 +257,14 @@
     </div>
     <!-- Copyright -->
 </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/f92816fa7c.js"></script>
 </body>
 </html>
